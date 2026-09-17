@@ -1,0 +1,44 @@
+name: DineCard 支援 / Support
+description: 回報 DineCard 功能、購買、帳號或其他使用問題
+title: "[Support] "
+labels: [support]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        請不要提供密碼、Apple ID、完整交易憑證、信用卡或其他敏感資訊。
+  - type: dropdown
+    id: category
+    attributes:
+      label: 問題類型
+      options:
+        - App 功能
+        - 購買 / 還原購買
+        - 訂閱 / 去除廣告
+        - 帳號 / 資料刪除
+        - 搜尋 / 餐廳卡片
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題描述
+      description: 請描述發生了什麼，以及你原本預期的結果。
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: 發生時間
+      placeholder: 例如 2026-09-17 13:30 (UTC+8)
+  - type: input
+    id: version
+    attributes:
+      label: DineCard 版本 / Build
+      placeholder: 例如 0.1.0 (6)
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現方式或其他資訊
+      description: 可附上已遮蔽個人資訊的截圖。
