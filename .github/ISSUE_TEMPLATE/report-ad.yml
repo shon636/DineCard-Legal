@@ -1,0 +1,56 @@
+name: DineCard 廣告回報 / Report an Ad
+description: 回報不適當、誤導或可能不符合年齡的廣告
+title: "[Ad Report] "
+labels: [ad-report]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        請不要提供 Apple ID、付款資料、密碼或其他敏感資訊。若附截圖，請先遮蔽個人資訊。
+  - type: dropdown
+    id: placement
+    attributes:
+      label: 廣告出現的位置
+      options:
+        - Banner
+        - Interstitial
+        - Rewarded
+        - 不確定
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 問題類型
+      options:
+        - 成人 / 性內容
+        - 暴力 / 血腥
+        - 賭博
+        - 誤導 / 詐騙疑慮
+        - 仇恨 / 歧視
+        - 不符合年齡
+        - 其他不適當內容
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: 大約看到廣告的時間
+      placeholder: 例如 2026-09-17 13:30 (UTC+8)
+    validations:
+      required: true
+  - type: input
+    id: advertiser
+    attributes:
+      label: 廣告品牌或名稱（如果知道）
+  - type: textarea
+    id: details
+    attributes:
+      label: 廣告內容與問題描述
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截圖或其他資訊
+      description: 可拖曳上傳已遮蔽個人資訊的截圖。
